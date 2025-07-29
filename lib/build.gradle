@@ -7,15 +7,15 @@ plugins {
 }
 
 project.ext {
-    artifactId = 'yandex_disk_file_lister_navigator_selector'
-    groupId = 'com.github.aakumykov'
+    artifactId = 'authsdk'
+    groupId = 'com.yandex.android'
 
     majorVersionNum = 4
     minorVersionNum = 0
-    patchVersionNum = 0
+    patchVersionNum = 1
     suffix = "alpha"
 
-    versionCode = 2
+    versionCode = 3
 
     versionName = majorVersionNum + "." + minorVersionNum + "." + patchVersionNum + "-" + suffix
 }
