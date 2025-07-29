@@ -7,15 +7,15 @@ plugins {
 }
 
 project.ext {
-    artifactId = 'authsdk'
-    groupId = 'com.yandex.android'
+    artifactId = 'yandex_login_sdk_android_flamingo_3'
+    groupId = 'com.github.aakumykov'
 
-    majorVersionNum = 4
+    majorVersionNum = 5
     minorVersionNum = 0
-    patchVersionNum = 1
+    patchVersionNum = 0
     suffix = "alpha"
 
-    versionCode = 3
+    versionCode = 5
 
     versionName = majorVersionNum + "." + minorVersionNum + "." + patchVersionNum + "-" + suffix
 }
