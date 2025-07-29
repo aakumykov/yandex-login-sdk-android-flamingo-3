@@ -87,5 +87,5 @@ dependencies {
     implementation libs.androidx.lifecycle.viewmodel.ktx
 
 //    implementation project(path: ':lib')
-    implementation 'com.yandex.android:authsdk:4.0.1-alpha'
+    implementation 'com.yandex.android:authsdk:5.0.0-alpha'
 }
