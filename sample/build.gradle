@@ -82,8 +82,10 @@ dependencies {
     implementation libs.androidx.appcompat
     implementation libs.material
     implementation libs.androidx.constraintlayout
-    implementation project(path: ':lib')
     testImplementation libs.junit
     implementation libs.androidx.fragment.ktx
     implementation libs.androidx.lifecycle.viewmodel.ktx
+
+//    implementation project(path: ':lib')
+    implementation 'com.yandex.android:authsdk:4.0.1-alpha'
 }
