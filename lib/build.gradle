@@ -10,12 +10,12 @@ project.ext {
     artifactId = 'authsdk'
     groupId = 'com.yandex.android'
 
-    majorVersionNum = 4
+    majorVersionNum = 5
     minorVersionNum = 0
-    patchVersionNum = 1
+    patchVersionNum = 0
     suffix = "alpha"
 
-    versionCode = 3
+    versionCode = 4
 
     versionName = majorVersionNum + "." + minorVersionNum + "." + patchVersionNum + "-" + suffix
 }
