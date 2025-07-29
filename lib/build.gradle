@@ -3,10 +3,25 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
+    id 'maven-publish'
+}
+
+project.ext {
+    artifactId = 'yandex_disk_file_lister_navigator_selector'
+    groupId = 'com.github.aakumykov'
+
+    majorVersionNum = 4
+    minorVersionNum = 0
+    patchVersionNum = 0
+    suffix = "alpha"
+
+    versionCode = 2
+
+    versionName = majorVersionNum + "." + minorVersionNum + "." + patchVersionNum + "-" + suffix
 }
 
 android {
-    namespace 'com.yandex.android.authsdk'
+    namespace groupId + '.' + artifactId
     compileSdk 35
 
     defaultConfig {
@@ -53,6 +68,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+        }
+    }
 }
 
 dependencies {
@@ -78,4 +99,17 @@ dependencies {
     testImplementation libs.assertj.core
     testImplementation libs.mockito.core
     testImplementation libs.mockk
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = project.groupId
+            artifactId = project.artifactId
+            version = versionName
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
 }
